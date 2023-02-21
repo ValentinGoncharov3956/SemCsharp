@@ -42,4 +42,6 @@ if (userNumber1 == 7)
     Console.WriteLine("Воскресенье");
 }
 else
-Console.WriteLine("Ты неправильно выполнил условие:(");
+{
+    Console.WriteLine("Ты неправильно выполнил условие:(");
+}
