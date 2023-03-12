@@ -6,7 +6,7 @@
 Console.WriteLine("Введите число");
 int userNumber1 = Convert.ToInt32(Console.ReadLine());
 
-for (int i = 1; i <= userNumber1; i++)
+for (int i = 1; i <= userNumber1; i++)                              // если условия, как в задаче на семинаре, то вместо 1 поставить -userNumber1
 {
     if (i % 2 == 0) 
     Console.WriteLine(i + " ");
