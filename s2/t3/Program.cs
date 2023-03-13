@@ -16,6 +16,6 @@ if (userNumber1 % userNumber2 == 0)
     Console.WriteLine("кратно");
 }
 else
-{ Console.Write("не кратно, остоток ");
+{ Console.Write("не кратно, остаток ");
     Console.WriteLine(res);
 }
