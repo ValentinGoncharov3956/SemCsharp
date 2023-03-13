@@ -15,8 +15,8 @@ if (userNumber1 > userNumber2)
     // Console.Write("min = ");
     // Console.WriteLine(userNumber2);
 
-    Console.Write("max = " + userNumber1 + " min = " + userNumber2);
-
+    //Console.Write("max = " + userNumber1 + " min = " + userNumber2);
+    Console.WriteLine($"max {userNumber1}, min {userNumber2}");
 }
 else
 {
@@ -25,6 +25,6 @@ else
     // Console.Write("min = ");
     // Console.WriteLine(userNumber1);
 
-    Console.Write("max = " + userNumber2 + " min = " + userNumber1);
-
+    //Console.Write("max = " + userNumber2 + " min = " + userNumber1);
+    Console.WriteLine($"max {userNumber2}, min {userNumber1}");
 }
