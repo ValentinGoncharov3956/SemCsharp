@@ -10,15 +10,21 @@ int userNumber2 = Convert.ToInt32(Console.ReadLine());
 
 if (userNumber1 > userNumber2)
 {
-    Console.Write("max = ");
-    Console.WriteLine(userNumber1);
-    Console.Write("min = ");
-    Console.WriteLine(userNumber2);
+    // Console.Write("max = ");
+    // Console.WriteLine(userNumber1);
+    // Console.Write("min = ");
+    // Console.WriteLine(userNumber2);
+
+    Console.Write("max = " + userNumber1 + " min = " + userNumber2);
+
 }
 else
 {
-    Console.Write("max = ");
-    Console.WriteLine(userNumber2);
-    Console.Write("min = ");
-    Console.WriteLine(userNumber1);
+    // Console.Write("max = ");
+    // Console.WriteLine(userNumber2);
+    // Console.Write("min = ");
+    // Console.WriteLine(userNumber1);
+
+    Console.Write("max = " + userNumber2 + " min = " + userNumber1);
+
 }
