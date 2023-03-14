@@ -4,11 +4,14 @@
 // выдаёт номер четверти плоскости, в которой 
 // находится эта точка.
 
-Console.WriteLine("Введите координату точки по X");
-int x = Convert.ToInt32(Console.ReadLine());
+int ReadNumber(string message)
+{
+        Console.WriteLine(message);
+        return Convert.ToInt32(Console.ReadLine());
+}
 
-Console.WriteLine("Введите координату точки по Y");
-int y = Convert.ToInt32(Console.ReadLine());
+int x = ReadNumber("Введите координату точки по X");
+int y = ReadNumber("Введите координату точки по Y");
 
 if (x > 0 && y > 0)
 {
