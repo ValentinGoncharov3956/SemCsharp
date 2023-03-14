@@ -29,7 +29,7 @@ if (userNumber1 == 4)
 else
 if (userNumber1 == 5)
 {
-    Console.WriteLine("Пятница");
+    Console.WriteLine("УРААААА!!!! Пятница");
 }
 else
 if (userNumber1 == 6)
