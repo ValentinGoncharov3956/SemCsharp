@@ -7,6 +7,7 @@
 
 Console.WriteLine("Введите любое трёхзначное число");
 int userNumber1 = Convert.ToInt32(Console.ReadLine());
+userNumber1 = Math.Abs(userNumber1); //модуль от числа (-12 делает 12)
 
 if (userNumber1 < 100 || userNumber1 > 999)
 {
