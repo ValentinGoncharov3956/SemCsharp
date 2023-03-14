@@ -6,4 +6,22 @@
 
 // 78 -> третьей цифры нет
 
-// 32679 -> 6
+ 
+
+Console.WriteLine("Введите любое число");
+int userNumber1 = Convert.ToInt32(Console.ReadLine());
+
+if (userNumber1 < 100)
+{
+    Console.WriteLine ("Третьей цифры нет");
+}
+else
+{
+while (userNumber1 > 999)
+{
+    userNumber1 /= 10;
+}
+
+userNumber1 %= 10;
+Console.WriteLine(userNumber1);
+}
