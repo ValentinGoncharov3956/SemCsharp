@@ -10,7 +10,7 @@ int userNumber1 = Convert.ToInt32(Console.ReadLine());
 
 if (userNumber1 < 100 || userNumber1 > 999)
 {
-    Console.WriteLine("Вы ввели не трехзначное число. Конец Игры."); 
+    Console.WriteLine("Вы ввели не трехзначное число.");
 }
 else
 {
