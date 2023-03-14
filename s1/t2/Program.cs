@@ -6,11 +6,13 @@
 
 
 Console.WriteLine("Введите 1 число");
-string userAnswer1 = Console.ReadLine();                       //int userNumber1 = Convert.ToInt32(Console.ReadLine());
-int userNumber1 = Convert.ToInt32(userAnswer1);
+// string userAnswer1 = Console.ReadLine();                       //int userNumber1 = Convert.ToInt32(Console.ReadLine());
+// int userNumber1 = Convert.ToInt32(userAnswer1);
+int userNumber1 = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите 2 число");
-string userAnswer2 = Console.ReadLine();
-int userNumber2 = Convert.ToInt32(userAnswer2);
+// string userAnswer2 = Console.ReadLine();
+// int userNumber2 = Convert.ToInt32(userAnswer2);
+int userNumber2 = Convert.ToInt32(Console.ReadLine());
 
 if (userNumber1 == userNumber2 * userNumber2)
 {

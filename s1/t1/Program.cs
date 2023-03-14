@@ -6,10 +6,11 @@
 // -7 -> 49
 
 Console.WriteLine("Введите число");
-string userAnswer = Console.ReadLine();
-int userNumber = Convert.ToInt32(userAnswer);
+// string userAnswer = Console.ReadLine();
+// int userNumber = Convert.ToInt32(userAnswer);
+int userNumber1 = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine(userNumber * userNumber);
+Console.WriteLine(userNumber1 * userNumber1);
 
 
 //Фунцкии и массивы
