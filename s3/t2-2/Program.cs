@@ -9,3 +9,7 @@ int ReadNumber(string message)
         return Convert.ToInt32(Console.ReadLine());
 }
 
+//         Console.WriteLine(message);
+//         int value = Convert.ToInt32(Console.ReadLine());
+//         return value;
+
