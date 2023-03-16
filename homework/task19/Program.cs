@@ -7,8 +7,13 @@
 // 23432 -> да
 // 12821 -> да
 
-Console.WriteLine("Введите пятизначное число");
-int userNumber = Convert.ToInt32(Console.ReadLine());
+int ReadNumber(string message)
+{
+        Console.WriteLine(message);
+        return Convert.ToInt32(Console.ReadLine());
+}
+
+int userNumber = ReadNumber("Введите пятизначное число");
 
 if (userNumber > 99999)
 {
