@@ -18,5 +18,6 @@ int[] array = new int[num];
 for(int i=0; i < num; i++)
 {
         array[i] = Random.Shared.Next(0,2);
-        Console.Write(array[i] + " ");
 }
+
+Console.WriteLine(string.Join(" ", array));
