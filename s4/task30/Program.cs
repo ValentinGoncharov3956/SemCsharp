@@ -20,4 +20,7 @@ for(int i=0; i < num; i++)
         array[i] = Random.Shared.Next(0,2);
 }
 
-Console.WriteLine(string.Join(" ", array));
+Console.WriteLine($"[{string.Join(" ", array)}]");
+
+string a = "abcd";
+Console.WriteLine($"[{string.Join(", ", a.ToArray())}]");
