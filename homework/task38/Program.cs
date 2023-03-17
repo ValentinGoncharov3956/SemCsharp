@@ -49,8 +49,8 @@ int[] ourArray = RandomArray(lengthArray, leftBorder, rightBorder);
 Console.WriteLine($"[{string.Join(", ", ourArray)}]");
 
 (int Max, int Min) = MinAndMaxElem(ourArray);
-Console.WriteLine($"Максимальный положительный элемент = {Max}");
-Console.WriteLine($"Минимальный положительный элемент = {Min}");
+Console.WriteLine($"Максимальный элемент = {Max}");
+Console.WriteLine($"Минимальный элемент = {Min}");
 
-Console.WriteLine($"Разница между максимальным и минимальным элеметом масива = {Max-Min}");
+Console.WriteLine($"Разница между максимальным и минимальным элементом массива = {Max-Min}");
 
