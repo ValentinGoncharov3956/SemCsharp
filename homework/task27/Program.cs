@@ -16,14 +16,14 @@ int ReadNumber(string message)
 
 int Count(int a)
 {
-    int count;
-    for (count = 0; a != 0; count++)
+  int sum = 0;
+  while (a > 0)
   {
-    a /= 10;
+    sum = sum + a % 10;
+    a = a / 10;
   }
-   return count;
+  return sum;
 }
 
 int num = ReadNumber("Введите число");
-int result = Count(num);
-Console.WriteLine(result);
+Console.WriteLine(Count(num));
