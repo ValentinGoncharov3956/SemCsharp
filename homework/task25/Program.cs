@@ -6,15 +6,38 @@
 // 2, 4 -> 16
 
 
-double ReadNumber(string message)
+int ReadNumber(string message)
 {
         Console.WriteLine(message);
-        return double.Parse(Console.ReadLine());
+        return int.Parse(Console.ReadLine());
 }
 
-double A = ReadNumber("Введите 1 число");
-double B = ReadNumber("Введите 2 число");
 
-double C = Math.Pow(A, B);
+int Pow(int A, int B)
+{
+    int c = 1;
+    for (int i = 0; i < B; i++)
+    {
+        c = A * c;
+    }
+    return c;
+}
+// double C = Math.Pow(A, B);
 
-Console.WriteLine(C);
+bool Rest(int B)
+    {
+        if (B < 0)
+        {
+            Console.WriteLine ("Укажите другое число");
+            return false;
+        }
+        return true;
+    }
+
+
+int A = ReadNumber("Введите 1 число");
+int B = ReadNumber("Введите 2 число");
+if (Rest(B))
+{
+Console.WriteLine(Pow(A, B));
+}
