@@ -56,7 +56,7 @@ int rightBorder = ReadNumber("Задайте правую границу");
 
 int[] ourArray = RandomArray(lengthArray, leftBorder, rightBorder);
 int[] FindC = FindSum(ourArray);
-Console.WriteLine($"[{string.Join(", ", ourArray)}] -> [{string.Join(", ", FindC)}]");
+Console.WriteLine($"[{string.Join(", ", ourArray)}] -> {string.Join(", ", FindC)}");
 
 // Console.WriteLine($"[{string.Join(", ", FindC)}]");
 
