@@ -14,16 +14,72 @@ int ReadNumber(string message)
         return int.Parse(Console.ReadLine());
 }
 
-int num = ReadNumber("Введите число");
-
-void FillRandomArray(int[] array)
+int[] RandomArray(int length, int leftRange, int rigthRange)
 {
-        for(int i=0; i < num; i++)
+    // int length = 12;
+    // int leftRange = -9;
+    // int rigthRange = 9;
+
+    int[] array = new int[length];
+
+    for(int i=0; i < array.Length; i++)
         {
-                array[i] = Random.Shared.Next(0,2);
+            array[i] = Random.Shared.Next(leftRange, rigthRange + 1);
         }
+    return array;
 }
 
-int[] array = new int[num];
-FillRandomArray(array);
-Console.WriteLine($"[{string.Join(", ", array)}]");
+(int, int) SumPosandNegElem(int[] array)
+{
+    int SumPos = 0;
+    int SumNeg = 0;
+
+    for(int i = 0; i < array.Length; i++)
+    {
+        if(array[i] > 0)
+        {
+            SumPos += array[i]; // SumPos = SumPos + array[i];
+        }
+        else
+        {
+            SumNeg += array[i];
+        }
+    }
+    return (SumPos, SumNeg);
+}
+
+int lengthArray = ReadNumber("Задайте длину массива");
+int leftBorder = ReadNumber("Задайте левую гранциу");
+int rightBorder = ReadNumber("Задайте правую границу");
+
+int[] ourArray = RandomArray(lengthArray, leftBorder, rightBorder);
+
+Console.WriteLine($"[{string.Join(", ", ourArray)}]");
+(int sumP, int sumN) = SumPosandNegElem(ourArray);
+Console.WriteLine($"Сумма положительных элементов = {sumP}");
+Console.WriteLine($"Сумма отрицательных элементов = {sumN}");
+
+
+
+
+
+
+
+// int[] array = new int[num];
+// FillRandomArray(array);
+// Console.WriteLine($"[{string.Join(", ", array)}]");
+
+    // int length = array.length(12);
+    // array[] = Random.Shared.Next(-9,10) 
+
+
+// void FillRandomArray(int[] array)
+// {
+//         for(int i=0; i < num; i++)
+//         {
+//                 array[i] = Random.Shared.Next(-9,10);
+//         }
+// }
+
+// string a = "abcd";
+// Console.WriteLine($"[{string.Join(", ", a.ToArray())}]");
