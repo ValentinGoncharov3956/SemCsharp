@@ -32,5 +32,5 @@ Console.WriteLine($"[{string.Join(", ", array)}]");
 
 // Console.WriteLine($"[{string.Join(" ", array)}]");
 
-string a = "abcd";
-Console.WriteLine($"[{string.Join(", ", a.ToArray())}]");
+// string a = "abcd";
+// Console.WriteLine($"[{string.Join(", ", a.ToArray())}]");
