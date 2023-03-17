@@ -5,11 +5,11 @@
 // [3, 7, 23, 12] -> 19
 // [-4, -6, 89, 6] -> 0
 
-int ReadNumber(string message)
-{
-        Console.WriteLine(message);
-        return int.Parse(Console.ReadLine());
-}
+// int ReadNumber(string message)
+// {
+//         Console.WriteLine(message);
+//         return int.Parse(Console.ReadLine());
+// }
 int lenght = 4;                                         // присваеваем длину массива, через ReadNumber, можно запросить у пользователя любую длинну.
 void RandomArray(int[] array)
 {

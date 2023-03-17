@@ -4,11 +4,11 @@
 
 // [345, 897, 568, 234] -> 2
 
-int ReadNumber(string message)
-{
-        Console.WriteLine(message);
-        return int.Parse(Console.ReadLine());
-}
+// int ReadNumber(string message)
+// {
+//         Console.WriteLine(message);
+//         return int.Parse(Console.ReadLine());
+// }
 int lenght = 10;
 void RandomArray(int[] array)
 {
