@@ -12,12 +12,19 @@ int ReadNumber(string message)
         return int.Parse(Console.ReadLine());
 }
 
-int num = ReadNumber("Введите число");
+int num = ReadNumber("Введите кол-во эл массива");
 
-int[] array = new int[num];
+int[] Array = new int[num];
 
-for(int i=0; i < num; i++)
+for(int i = 0; i < Array.Length; i++)
 {
-        array[i] = Random.Shared.Next(0,2);
-        Console.Write(array[i] + " ");
+        Array[i] = ReadNumber($"Введите число для массива с индексом {i}");
 }
+
+Console.WriteLine("Вывод массива:");
+Console.Write("[ ");
+for(int i = 0; i < Array.Length; i++)
+{
+        Console.Write($"{Array[i]} ");
+}
+Console.WriteLine("]");
