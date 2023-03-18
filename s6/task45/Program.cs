@@ -16,10 +16,12 @@ RandomArray(array);
 
 int[] array2 = new int[array.Length];
 
-for (int i = 0; i < array.Length; i++)
-{
-    array2[i] = array[i];
-}
+// for (int i = 0; i < array.Length; i++)
+// {
+//     array2[i] = array[i];
+// }
+
+Array.Copy(array, array2, array.Length);
 array2[0] = 124;
 System.Console.WriteLine(string.Join(", ", array));
 System.Console.WriteLine(string.Join(", ", array2));
