@@ -67,36 +67,72 @@
 
 // Console.WriteLine($"[{string.Join(", ", array)}]");
 
-int n = 786;      //2147483647 - макс значение
 
-int countOfDigit = 0;
-int nCopy = n;
 
-while(nCopy != 0)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Задача 42: Напишите программу, которая будет 
+// преобразовывать десятичное число в двоичное.
+// 45 -> 101101
+// 3  -> 11
+// 2  -> 10
+
+
+
+// int n = 786;      //2147483647 - макс значение
+
+// int countOfDigit = 0;
+// int nCopy = n;
+
+// while(nCopy != 0)
+// {
+//     nCopy /= 2;
+//     countOfDigit++;
+// }
+// Console.WriteLine(countOfDigit);
+
+// int[] binaryNumber = new int[countOfDigit];
+
+// for (int i = 0; i < binaryNumber.Length; i++)
+// {
+//      binaryNumber[i] = n % 2;
+//      n /= 2; 
+// }
+
+// void ReverseArray(int[] array)
+// {
+//     for (int i = 0; i < array.Length / 2; i++)
+//     {
+//         int temp = array[i];
+//         array[i] = array[array.Length -i -1];
+//         array[array.Length -i -1] = temp;
+//     }
+// }
+
+// Console.WriteLine(string.Join("", binaryNumber));
+// ReverseArray(binaryNumber);
+// Console.WriteLine(string.Join("", binaryNumber));
+
+int n = 44;
+
+void PrintBinary(int n)
 {
-    nCopy /= 2;
-    countOfDigit++;
-}
-Console.WriteLine(countOfDigit);
-
-int[] binaryNumber = new int[countOfDigit];
-
-for (int i = 0; i < binaryNumber.Length; i++)
-{
-     binaryNumber[i] = n % 2;
-     n /= 2; 
+    if (n == 0) return;
+    PrintBinary(n/2);
+    Console.Write(n%2);
 }
 
-void ReverseArray(int[] array)
-{
-    for (int i = 0; i < array.Length / 2; i++)
-    {
-        int temp = array[i];
-        array[i] = array[array.Length -i -1];
-        array[array.Length -i -1] = temp;
-    }
-}
-
-Console.WriteLine(string.Join("", binaryNumber));
-ReverseArray(binaryNumber);
-Console.WriteLine(string.Join("", binaryNumber));
+PrintBinary(n);

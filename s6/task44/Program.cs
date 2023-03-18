@@ -4,3 +4,36 @@
 // Если N = 5 -> 0 1 1 2 3
 // Если N = 3 -> 0 1 1
 // Если N = 7 -> 0 1 1 2 3 5 8
+
+
+int ReadNumber(string message)
+{
+        Console.WriteLine(message);
+        return int.Parse(Console.ReadLine());
+}
+
+int num = ReadNumber("Введите число");
+// int[] Fibonachi = new int[num];
+
+// Fibonachi[0] = 0;
+// Fibonachi[1] = 1;
+
+// for (int i = 2; i < Fibonachi.Length; i++)
+// {
+//     Fibonachi[i] = Fibonachi[i-1] + Fibonachi[i-2];
+// }
+
+// Console.WriteLine(string.Join(", ", Fibonachi));
+
+int a = 0;
+int b = 1;
+
+System.Console.Write(a + " " + b + " ");
+
+for (int i = 0; i < num; i++)
+{
+    int c = a+b;
+    Console.Write(c + " ");
+    a = b;
+    b = c;
+}
