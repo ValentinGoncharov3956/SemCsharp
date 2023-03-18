@@ -6,11 +6,11 @@
 // [6 7 3 6] -> [6 3 7 6]
 
 
-int ReadNumber(string message)
-{
-        Console.WriteLine(message);
-        return int.Parse(Console.ReadLine());
-}
+// int ReadNumber(string message)
+// {
+//         Console.WriteLine(message);
+//         return int.Parse(Console.ReadLine());
+// }
 
 int[] RandomArray(int lenght, int leftRange, int rigthRange)
 {
