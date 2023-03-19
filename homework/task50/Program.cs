@@ -8,3 +8,58 @@
 // 8 4 2 4
 
 // 17 -> такого числа в массиве нет
+
+
+int ReadNumber(string message)
+{
+        Console.WriteLine(message);
+        return int.Parse(Console.ReadLine());
+}
+
+int[,] GetRandomMatrix(int rows = 5, int colums = 5, int leftBorder = 0, int rightBorder = 10)
+{    
+    int[,] matrix = new int[rows, colums];
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            matrix[i, j] = Random.Shared.Next(leftBorder, rightBorder + 1); 
+        }
+    }
+    return matrix;
+}
+
+void PrintMatrix(int[,] matrix)
+{    
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        Console.Write("[");
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        { 
+            Console.Write(matrix[i, j] + ", ");
+        }
+        Console.WriteLine("]");
+    }
+}
+
+void Checking(int[,] matrix, int rows, int colums)
+{
+if (rows > matrix.GetLength(0))
+{
+    Console.WriteLine($"{rows} - > Вы вышли за пределы масива.");
+}
+else
+if (colums > matrix.GetLength(1))
+{
+    Console.WriteLine($"{colums} - > Вы вышли за пределы масива.");
+}
+}
+
+int[,] myMatrix = GetRandomMatrix();
+PrintMatrix(myMatrix);
+System.Console.WriteLine();
+Console.WriteLine("Введите искомое число");
+int m = ReadNumber("Введите строку");
+int n = ReadNumber("Введите столбец");
+Checking(myMatrix, m, n);
+
