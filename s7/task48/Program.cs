@@ -8,3 +8,40 @@
 // 0 1 2 3
 // 1 2 3 4
 // 2 3 4 5
+
+int ReadNumber(string message)
+{
+        Console.WriteLine(message);
+        return int.Parse(Console.ReadLine());
+}
+
+int[,] FillMatrix(int rows, int colums)
+{    
+    int[,] matrix = new int[rows, colums];
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            matrix[i, j] = i + j;
+        }
+    }
+    return matrix;
+}
+
+void PrintMatrix(int[,] matrix)
+{    
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        Console.Write("[");
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        { 
+            Console.Write(matrix[i, j] + ", ");
+        }
+        Console.WriteLine("]");
+    }
+}
+
+int m = ReadNumber("Введите количетсво строк");
+int n = ReadNumber("Введите количетсво столбцов");
+int[,] myMatix = FillMatrix(m, n);
+PrintMatrix(myMatix);
