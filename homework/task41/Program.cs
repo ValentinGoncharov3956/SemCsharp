@@ -34,7 +34,6 @@ int Sum(int[] array)
 }
 
 int lenght = ReadNumber("Введите длину массива");
-int[] array;
-array = ArrayUser(lenght);
+int[] array = ArrayUser(lenght);
 Console.WriteLine($"[{string.Join(", ", array)}]");
 Console.WriteLine($"Количество чисел больше 0 - {Sum(array)}");
