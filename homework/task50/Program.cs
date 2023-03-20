@@ -50,13 +50,13 @@ void Checking(int[,] matrix, int rows, int colums)
     }
     else
     {
-    Console.WriteLine($"Запрашиваемое число -> {matrix[rows, colums]}");
+        Console.WriteLine($"Запрашиваемое число -> {matrix[rows, colums]}");
     }
 }
 
 int[,] myMatrix = GetRandomMatrix();
 PrintMatrix(myMatrix);
-System.Console.WriteLine();
+Console.WriteLine();
 Console.WriteLine("Введите искомое число");
 int m = ReadNumber("Введите строку");
 int n = ReadNumber("Введите столбец");
