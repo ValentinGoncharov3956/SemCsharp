@@ -12,30 +12,30 @@
 
 int ReadNumber(string message)
 {
-        Console.WriteLine(message);
-        return int.Parse(Console.ReadLine());
+    Console.WriteLine(message);
+    return int.Parse(Console.ReadLine());
 }
 
 int[,] GetRandomMatrix(int rows = 5, int colums = 5, int leftBorder = 0, int rightBorder = 10)
-{    
+{
     int[,] matrix = new int[rows, colums];
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            matrix[i, j] = Random.Shared.Next(leftBorder, rightBorder + 1); 
+            matrix[i, j] = Random.Shared.Next(leftBorder, rightBorder + 1);
         }
     }
     return matrix;
 }
 
 void PrintMatrix(int[,] matrix)
-{    
+{
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
         Console.Write("[");
         for (int j = 0; j < matrix.GetLength(1); j++)
-        { 
+        {
             Console.Write(matrix[i, j] + ", ");
         }
         Console.WriteLine("]");
@@ -44,15 +44,14 @@ void PrintMatrix(int[,] matrix)
 
 void Checking(int[,] matrix, int rows, int colums)
 {
-if (rows > matrix.GetLength(0))
-{
-    Console.WriteLine($"{rows} - > Вы вышли за пределы масива.");
-}
-else
-if (colums > matrix.GetLength(1))
-{
-    Console.WriteLine($"{colums} - > Вы вышли за пределы масива.");
-}
+    if (rows > matrix.GetLength(0) || colums > matrix.GetLength(1))
+    {
+        Console.WriteLine($"{rows}, {colums} - > Вы вышли за пределы масива.");
+    }
+    else
+    {
+    Console.WriteLine($"{matrix[rows, colums]}");
+    }
 }
 
 int[,] myMatrix = GetRandomMatrix();
