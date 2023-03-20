@@ -9,7 +9,7 @@ int ReadNumber(string message)
     return int.Parse(Console.ReadLine());
 }
 
-int[,] GetRandomMatrix(int rows = 8, int colums = 3, int leftBorder = 0, int rightBorder = 10)
+int[,] GetRandomMatrix(int rows = 6, int colums = 3, int leftBorder = 0, int rightBorder = 10)
 {
     int[,] matrix = new int[rows, colums];
     for (int i = 0; i < matrix.GetLength(0); i++)
@@ -25,11 +25,11 @@ int[,] GetRandomMatrix(int rows = 8, int colums = 3, int leftBorder = 0, int rig
 int[,] NewMatrix(int[,] matrix)
 {
     int[,] newmatrix = new int[matrix.GetLength(1), matrix.GetLength(0)];
-    for (int i = 0; i < matrix.GetLength(1); i++)
+    for (int i = 0; i < matrix.GetLength(0); i++)
     {
-        for (int j = 0; j < matrix.GetLength(0); j++)
+        for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            newmatrix[i, j] = matrix[j, i];
+            newmatrix[j, i] = matrix[i, j];
         }
     }
     return newmatrix;

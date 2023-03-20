@@ -8,7 +8,7 @@ int ReadNumber(string message)
     return int.Parse(Console.ReadLine());
 }
 
-int[,] GetRandomMatrix(int rows = 5, int colums = 5, int leftBorder = 0, int rightBorder = 10)
+int[,] GetRandomMatrix(int rows = 5, int colums = 7, int leftBorder = 0, int rightBorder = 10)
 {
     int[,] matrix = new int[rows, colums];
     for (int i = 0; i < matrix.GetLength(0); i++)
@@ -36,7 +36,7 @@ void PrintMatrix(int[,] matrix)
 
 void Exchange(int[,] matrix)
 {
-     for (int j = 0; j < matrix.GetLength(0); j++)
+     for (int j = 0; j < matrix.GetLength(1); j++)
     {
         int temp = matrix[0, j];
         matrix[0, j] = matrix[matrix.GetLength(0)-1, j];
