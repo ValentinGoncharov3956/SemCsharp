@@ -50,7 +50,7 @@ void Checking(int[,] matrix, int rows, int colums)
     }
     else
     {
-    Console.WriteLine($"{matrix[rows, colums]}");
+    Console.WriteLine($"Запрашиваемое число -> {matrix[rows, colums]}");
     }
 }
 
