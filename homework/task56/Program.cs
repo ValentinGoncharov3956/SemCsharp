@@ -38,26 +38,34 @@ void PrintMatrix(int[,] matrix)
     }
 }
 
-void FindLeast(int[,] matrix)
+int SumLine(int[,] matrix, int i)
 {
-    int sum = 0;
-    int minsum = 0;
+    int sumLine = matrix[i, 0];
+    for (int j = 1; j < matrix.GetLength(1); j++)
+    {
+        sumLine += matrix[i, j];
+    }
+    return sumLine;
+}
+
+void Find(int[,] matrix)
+{
+    int index = 0;
+    int sumLine = SumLine(matrix, 0);
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
-        for (int j = 0; j < matrix.GetLength(1); j++)
+        int sum = SumLine(matrix, i);
+        if (sumLine > sum)
         {
-            sum += matrix[i,j];
+            sumLine = sum;
+            index = i;
         }
-        Console.WriteLine($"{sum}");
     }
-    if(minsum < sum)
-    {
-        minsum = sum;
-        System.Console.WriteLine($"строка с наименьшой суммой элементов{minsum}");
-    }
+    Console.WriteLine();
+    Console.WriteLine($"Строка с минимальной суммой -> {index + 1}");
 }
 
 int[,] myMatrix = GetRandomMatrix();
 PrintMatrix(myMatrix);
-Console.WriteLine("Новый массив:");
-FindLeast(myMatrix);
+int sumLine = SumLine(myMatrix, 0);
+Find(myMatrix);
