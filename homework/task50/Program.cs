@@ -44,7 +44,7 @@ void PrintMatrix(int[,] matrix)
 
 void Checking(int[,] matrix, int rows, int colums)
 {
-    if (rows > matrix.GetLength(0) || colums > matrix.GetLength(1))
+    if (rows > matrix.GetLength(0)-1 || colums > matrix.GetLength(1)-1)
     {
         Console.WriteLine($"{rows}, {colums} - > Вы вышли за пределы масива.");
     }
