@@ -49,7 +49,7 @@ void PrintMatrix(int[,] matrix)
     }
 }
 
-void Multiplication(int[,] matrix1, int [,] matrix2)
+void Multiplication(int[,] matrix1, int[,] matrix2)
 {
     int[,] array = new int[matrix1.GetLength(0), matrix1.GetLength(1)];
     for (int i = 0; i < array.GetLength(0); i++)
@@ -57,9 +57,9 @@ void Multiplication(int[,] matrix1, int [,] matrix2)
         Console.Write("[");
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            array[i, j] = matrix1[i,j]* matrix2[i,j];
+            array[i, j] = matrix1[i, j] * matrix2[i, j];
             Console.Write(array[i, j] + ", ");
-        }   
+        }
         Console.WriteLine("]");
     }
 }

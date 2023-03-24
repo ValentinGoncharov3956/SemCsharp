@@ -38,7 +38,7 @@ void PrintMatrix(int[,] matrix)
     }
 }
 
-int SumLine(int[,] matrix, int i)
+int SumFirstLine(int[,] matrix, int i)
 {
     int sumLine = matrix[i, 0];
     for (int j = 1; j < matrix.GetLength(1); j++)
@@ -51,10 +51,10 @@ int SumLine(int[,] matrix, int i)
 void Find(int[,] matrix)
 {
     int index = 0;
-    int sumLine = SumLine(matrix, 0);
+    int sumLine = SumFirstLine(matrix, 0);
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
-        int sum = SumLine(matrix, i);
+        int sum = SumFirstLine(matrix, i);
         if (sumLine > sum)
         {
             sumLine = sum;
@@ -67,5 +67,5 @@ void Find(int[,] matrix)
 
 int[,] myMatrix = GetRandomMatrix();
 PrintMatrix(myMatrix);
-int sumLine = SumLine(myMatrix, 0);
+int sumLine = SumFirstLine(myMatrix, 0);
 Find(myMatrix);
