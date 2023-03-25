@@ -3,10 +3,10 @@
 
 // m = 2, n = 3 -> A(m,n) = 9
 
-int M = 3;
-int N = 3;
+uint M = 3;
+uint N = 3;
 
-int FunctionAckermann(int m, int n)
+uint FunctionAckermann(uint m, uint n)
 {
     if (m == 0) return n + 1;
     if (m > 0 && n == 0) return FunctionAckermann(m - 1, 1);
@@ -14,5 +14,5 @@ int FunctionAckermann(int m, int n)
     return FunctionAckermann(m,n);
 }
 
-int Function = FunctionAckermann(M, N);
+uint Function = FunctionAckermann(M, N);
 Console.WriteLine(Function);
